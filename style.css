@@ -1,0 +1,10 @@
+.lista{
+  display: flex;
+flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+button{
+  height: 100px;
+  width: 100px;
+}
