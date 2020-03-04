@@ -46,14 +46,17 @@ function MandaMsg() {
  child = lista.lastElementChild;
  
  var link = 'https://web.whatsapp.com/send?phone=55';
- var msg = '&text=ola';
- //window.open(msg+tel+'&source='+midia);
+ var phone = dados[dados.length-1];
+ window.open(link+phone);
  dados.splice(dados.length-1, 1);
- console.log(dados.length +'\n'+ dados);
+ //console.log(dados.length +'\n'+ dados);
 }
 
 $(":button.add").on("click", () => {
   envia();
+  if(dados.length == 0){
+    $(':button.envia').show();
+   }
 });
 
 $(":button.envia").on("click", () => {
